@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.head1 {
+    background-color: #777;
+}
+
+.top_head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 25px;
+}
+
+.Contact i {
+    margin-right: 20px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+}
+
+.Contact span {
+    margin-right: 10px;
+    color: #fff;
+}
+
+.social a {
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #fff;
+    display: inline-block;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+}
+
+.social a:hover {
+    background-color: #fff;
+    color: #000;
+    transition-duration: 1s;
+}
+
+span {
+    color: #fff;
+}
+
+.sec_head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 25px;
+}
+a{
+    color: inherit;
+}
+
+.sec_head li a {
+    text-decoration: none;
+    color: #777;
+    font-size: 15px;
+    margin: 10px 15px;
+    text-align: center;
+    justify-content: center;
+}
+
+.top_head img {
+    color: #777;
+}
+
+.search i {
+    text-decoration: none;
+    color: #777;
+    font-size: 15px;
+    margin: 10px 15px;
+    text-align: center;
+    justify-content: center;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    margin: 40px;
+}
+
+.search i a {
+    color: #183833;
+}
+
+.all_btn {
+    text-align: center;
+
+    .btn {
+        padding: 10px 20px;
+        border: none;
+        font-size: 15px;
+        margin: 100px 15px;
+        cursor: pointer;
+        color: #777;
+        border-radius: 20px;
+    }
+}
+
+$theme-color :(
+    default: #777,
+    green: #183833,
+    olive:#808000,
+    blueviolate:#5147a3,
+    BOYSENBERRY:#630436,
+);
+
+@mixin theme($name, $color) {
+    .#{$name} {
+        background-color: $color;
+        .top_head li a{
+            color: $color;
+        }
+    }
+
+}
+
+@each $key,$value in $theme-color{
+    [data-theme = #{$key}]
+    {
+        color: white !important;
+        background-color: $value;
+    }
+    @include theme($key, $value);
+}

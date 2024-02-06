@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="section/css/style.css">
+    <link rel="stylesheet" href="section/css/all.min.css">
+</head>
+
+<body>
+
+    <main class="head1 default ">
+        <section class="top_head">
+            <div class="Contact">
+                <span><i class="fa fa-map-marker-alt me-2"></i>Find a Store</span>
+                <span><i class="fa-solid fa-phone"></i>Call us: +(406) 555-0120</span>
+            </div>
+            <span>Order same-day Delivery from our bakeries!</span>
+            <div class="social">
+                <a href="#"><i class="fab fa-twitter fw-normal"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                <a href="#"><i class="fab fa-instagram fw-normal"></i></a>
+                <a href="#"><i class="fab fa-youtube fw-normal"></i></a>
+            </div>
+        </section>
+    </main>
+    <section class="sec_head">
+        <a href="#"><img src="section/img/logo.jpg" alt=""></a>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">FULL MENU</a></li>
+            <li><a href="#">PAGES</a></li>
+            <li><a href="#">PORTFOLIO</a></li>
+            <li><a href="#">BLOG</a></li>
+            <li><a href="#">SHOP</a></li>
+        </ul>
+        <div class="search">
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#"><i class="fa-solid fa-user"></i></a>
+            <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+        </div>
+    </section>
+
+    <div class="all_btn">
+        <button class="btn" data-theme="default">default</button>
+        <button class="btn" data-theme="green">green</button>
+        <button class="btn" data-theme="olive">olive</button>
+        <button class="btn" data-theme="blueviolate">blueviolate</button>
+        <button class="btn" data-theme="BOYSENBERRY">BOYSENBERRY</button>
+    </div>
+
+    <script src="section/js/jquery-3.7.1.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            $('.btn').click(function () {
+                var themeName = $(this).data('theme');
+                $('main').removeClass().addClass('head1 '+themeName);
+            })
+        })
+
+    </script>
+
+</body>
+
+</html>
